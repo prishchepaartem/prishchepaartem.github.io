@@ -1,7 +1,5 @@
 source "https://rubygems.org"
-
-gem "liquid-md5"
-gem "jekyll-tagging"
-gem "kramdown-parser-gfm"
-
-gemspec
+gem 'jekyll'
+gem 'jekyll-paginate'
+gem 'jekyll-seo-tag'
+gem 'jekyll-sitemap'
