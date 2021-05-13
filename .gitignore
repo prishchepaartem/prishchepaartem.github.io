@@ -1,9 +1,7 @@
-tmp
-*.rdb
-.env
-.sass-cache
-.DS_Store
-.jekyll-cache
-.git
 _site
-.vscode
+.sass-cache
+.jekyll-metadata
+.jekyll-cache
+Gemfile.lock
+*.gem
+*.idea
