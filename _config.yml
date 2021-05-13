@@ -1,54 +1,63 @@
-title: dash
-author: GitHub User
-email: miguel-gonzalez@gmx.de
-description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-show_excerpts: false # set to true to show excerpts on the homepage
+site: Asko
+url: #yoururl
+title: Asko
+description: Simple and minimalistic jekyll blogging theme.
+googlewebfonts: Fira+Code:wght@400;500;700
+twitter:
+  username: #yourusername
+  card: summary
+  creator: #yourusername
+author:
+  twitter: #yourusername
+  name: #yourusername
+  avatar:
+  email: #youremail
+  url: #yoururl
+permalink: pretty
 
-paginate: 1
-paginate_path: "/blog/page:num/"
+baseurl: ""
 
-tag_permalink_style: pretty
-tag_page_layout: tag_page
-tag_page_dir: tag
+highlighter: rouge
 
-# jekyll-dash date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-dash:
-  date_format: "%b %-d, %Y"
+exclude:
+  - .jekyll-cache
+  
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
 
-  disqus:
-    shortname: bitbrain-github-io
-
-  # generate social links in footer
-  # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
-  social_links:
-    - url: https://twitter.com/bitbrain_
-      icon: twitter-square
-      color: cyan
-    - url: https://bitbrain.itch.io
-      icon: itch-io
-      color: red
-    - url: https://github.com/bitbrain
-      icon: github-square
-      color: purple
-
-  show_author: true
-
-  animation_speed: 50
-
-# Build settings
-theme: jekyll-dash
+sass:
+  sass_dir:          _sass
+  style:            :compressed
 
 plugins:
- - jekyll-feed
- - jekyll-seo-tag
- - jekyll-paginate
- - liquid-md5
- - jekyll/tagging
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
-# Replaces the default avatar provider (gravatar)
-#avatar_source: github
-#github_username: bitbrain
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:slug
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
